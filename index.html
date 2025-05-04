@@ -1,27 +1,85 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Library App</title>
-</head>
-<body>
-    <h1>Welcome to the Library</h1>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Library Management</title>
+        <script src="https://kit.fontawesome.com/1064154e74.js" crossorigin="anonymous"></script>
+        
+    </head>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
-    <h2>Books Available</h2>
-    <ul id="book-list">
-        </ul>
-    <button id="show-books">Show Available Books</button>
+        *{
+         padding: 0;
+         margin: 0;
+         font-family: "Outfit", sans-serif;
+         box-sizing: border-box;
+        }
 
-    <h2>Borrow a Book</h2>
-    <form id="borrow-form">
-        <label for="user-id">User ID:</label>
-        <input type="number" id="user-id" name="userId" required><br><br>
+    body{
+        background-color: rgb(91, 236, 151);
+        height: 100vh;    
+        }
 
-        <label for="book-id">Book ID:</label>
-        <input type="number" id="book-id" name="bookId" required><br><br>
+        input{
+            height: 2rem;
+        }
+        .btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 2rem;
+            padding: 0 1rem;
+        }
+        .flex-center{
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .main{
+            padding: 1rem 0;
+            border-radius: 15px;
+            box-shadow: 1rem 1rem 1rem rgba(0,0,0,0.5);
+            width: 80%;
+            margin: auto;
+            background-color: white;
+            border: 1px solid lightcoral;
+        }
+        .gap{
+            gap: 1rem;
+        }
+       
 
-        <button type="submit">Borrow Book</button>
-    </form>
-    <div id="message"></div>
+    </style>
+<body class="flex-center">
+    <div class="main flex-center gap">
+        <img src="" alt="">
+        <h1>Green Monster Library</h1>
+
+        <h2>Books Available</h2>
+        <ul id="book-list">
+            </ul>
+        <button id="show-books" class="btn">Books Available</button>
+
+            <div class="form">
+                <h2>Borrow a Book</h2>
+
+                <form id="borrow-form" class="flex-center gap">
+                    <label for="user-id">User ID:</label>
+                    <input type="number" id="user-id" name="userId" required><br><br>
+
+                    <label for="book-id">Book ID:</label>
+                    <input type="number" id="book-id" name="bookId" required><br><br>
+
+                    <button type="submit" class="btn">Borrow Book</button>
+                </form>
+
+                <div id="message"></div>
+            </div>
+    </div>
 
     <script>
         const bookList = document.getElementById('book-list');

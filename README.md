@@ -1,34 +1,95 @@
-<h1>
-  LIBRARY MANAGEMENT SYSTEM
-</h1>
+# 📚Library Management System
 
+This is a basic Library Management System project. It includes a database setup and a Node.js backend to connect to the database and serve an HTML frontend.
 
+<img src ="./assets/screenshot.PNG" alt= "preview">
 
-Step 1: Set up your Node.js project (if you haven't already)
+## ✨Features
 
-    Create a project directory:
+* Connects to a MySQL database.
+* Serves an HTML frontend.
+* Provides API endpoints to:
+    * Get available books.
+    * Borrow a book.
 
-    mkdir my_web_app
-    cd my_web_app
+## Technologies Used
 
-    Initialize a Node.js project:
+* Node.js
+* Express.js
+* MySQL
+* mysql2
+* dotenv
 
-    npm init -y
+## Project Structure
+```bash
+your-project-directory/
+ ├── index.html          # Frontend HTML
+ ├── index.js            # Backend Node.js server
+ ├── database/
+ │   └── schema.sql    # MySQL database schema
+ ├── .env                # Environment variables (for database credentials)
+ ├── node_modules/       # Node.js dependencies
+ ├── package.json          # Project configuration
+ ├── package-lock.json     #  Dependency Management
+ └── README.md           # Project documentation
+```
+## Setup Instructions
 
-    Install Express.js:
+***Ensure You have node.js installed***
 
-    npm install express
+1.  **Clone the repository:**
 
-    Create an index.js file:
+    ```bash
+    git clone https://github.com/charlesricha/Library-management-WK-8-Database-Project.git
+    cd Library-management-WK-8-Database-Project
+    ```
 
-    touch index.js
+2.  **Install dependencies:**
 
-    Create an index.html
+    ```bash
+    npm install express, sql2, dotenv
+    ```
 
-    touch index.html
+3.  **Set up the database:**
 
-Step 2: Set up your database connection in Node.js
+    * Create a MySQL database.
+    * Run the SQL queries in `database/schema.sql` to create the necessary tables.
 
-    Install the mysql2 package:
+4.  **Configure environment variables:**
 
-    npm install mysql2
+    * Create a `.env` file in the project root.
+    * Add your MySQL database credentials to the `.env` file:
+
+        ```bash
+        DB_HOST=your_host
+        DB_USER=your_mysql_user
+        DB_PASSWORD=your_mysql_password
+        DB_NAME=your_database_name
+        PORT=3000
+        ```
+
+    * Replace the placeholder values with your actual database credentials.
+    * **Important:** Ensure that the `.env` file is added to your `.gitignore` file.
+
+5.  **Start the server:**
+
+    ```bash
+    npm run start
+    ```
+    or
+    ```bash
+    node index.js
+    ```
+
+6.  **View the application:**
+
+    * Open your web browser and go to `http://localhost:3000`.
+
+##  Important Notes on Security
+* **Database Credentials:** The application uses a `.env` file to store sensitive information, such as database credentials.  This file is not included in version control.
+* **SQL Injection:** The application uses parameterized queries to help prevent SQL injection attacks.
+
+##  Future Improvements
+* Implement user authentication.
+* Add more features to manage books and users.
+* Create a more user-friendly frontend.
