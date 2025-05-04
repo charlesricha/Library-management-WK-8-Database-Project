@@ -1,0 +1,17 @@
+{
+  "name": "library-management-wk-8-database-project",
+  "version": "1.0.0",
+  "description": "<h1>\r   LIBRARY MANAGEMENT SYSTEM\r </h1>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mysql2": "^3.14.1"
+  }
+}
